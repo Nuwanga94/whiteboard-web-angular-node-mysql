@@ -1,0 +1,10 @@
+input.ng-invalid.ng-dirty{
+    border-bottom-color:red;
+    box-shadow: 1px 1px 1px 1px red;
+}
+
+.container{
+    width: 1000px;
+    text-align: left;
+    box-align: center;
+}
