@@ -36,35 +36,43 @@
                                 <div class="form-group">
                                   <label>First Name</label>
                                   <input class="t1" type="text" required #fname="ngModel"
-                                   class="form-control" 
+                                  [class.is-invalid]="fname.invalid && fname.touched" class="form-control" 
                                   name="fname" [(ngModel)]= "userModel.fname" ngModel required>
-                                 
+                                 <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">Name is required</small>
                                 </div>
                             
                                 <div class="form-group">
                                   <label>Last Name</label>
                                   <input type="text"  #lname="ngModel"
+                                  [class.is-invalid]="lname.invalid && lname.touched"
                                   class="form-control" 
                                   name="lname" [(ngModel)]= "userModel.lname" ngModel required>
                                 
                                 </div>
                             
                             
-                            
-                            
-                            
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="text"  required class="form-control" name="email" [(ngModel)]= "userModel.email" ngModel required [pattern]="emailPattern" >
+                                    <input type="text" #email="ngModel" [pattern]="emailPattern" required 
+                                    [class.is-invalid]="email.invalid && email.touched" class="form-control" 
+                                    name="email" [(ngModel)]= "userModel.email"  >
+                                    <div *ngIf="email.errors && (email.valid || email.touched)">
+                                        <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+                                        <small class="text-danger" *ngIf="email.errors.pattern">Invalid email address</small>
+                                    </div>
                                 </div>
                             
                             
                             
                                   <div class="form-group">
                                       <label>Phone</label>
-                                      <input type="tel" #phone="ngModel" pattern="^\d{10}$" 
-                                       class="form-control" name="phone" [(ngModel)]= "userModel.phone" >
-                                       
+                                      <input type="tel" #phone="ngModel" pattern="^\d{10}$" required
+                                      [class.is-invalid]="phone.invalid && phone.touched"
+                                      class="form-control" name="phone" [(ngModel)]= "userModel.phone" >
+                                       <div *ngIf="phone.errors && (phone.valid || phone.touched)">
+                                          <small class="text-danger" *ngIf="phone.errors.required">Phone number is required</small>
+                                          <small class="text-danger" *ngIf="phone.errors.pattern">Phone number must be 10 digits</small>
+                                       </div>
                                     
                                     </div>
                                 
