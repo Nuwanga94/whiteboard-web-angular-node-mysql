@@ -1,0 +1,19 @@
+.body{
+    background-color: whitesmoke;
+}
+
+
+
+
+.btn{
+    position: relative;
+    top :60px;
+    left: 20px;
+}
+
+
+.type{
+    width: 260px;
+    padding-left: 10px;
+    background-color: rgb(177, 135, 216);
+}

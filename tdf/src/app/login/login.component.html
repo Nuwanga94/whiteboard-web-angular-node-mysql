@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+   
+</head>
+<body id="clrblk">
+
+        <div class="container">   
+
+            <div class="panelbox">
+
+
+       <!-- <div id="loginbox" style="margin-top:100px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  -->                 
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title"><h3>Sign In</h3></div>
+                        <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
+                    </div>    
+                    
+
+
+                    
+
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+
+                            <div class="radioset">
+                                    <label>Seect Account Type</label>
+                                    <form action="">
+                                            
+                                        <input  type="radio" name="admin" value="admin" [(ngModel)]= "newUser.type" ngModel required> Admin
+                                        <input  type="radio" name="student" value="student" [(ngModel)]= "newUser.type" ngModel required> Student
+                                        <input  type="radio" name="teacher" value="teacher" [(ngModel)]= "newUser.type" ngModel required> Teacher
+                                      </form>
+                                    </div>
+
+                                    <br>
+    
+                        <form id="loginform" class="form-horizontal" role="form" method="post" action="/login" #loginForm= "ngForm" (ngSubmit)=onSubmit()>
+                                   
+                            <div style="margin-bottom: 25px" class="input-group">
+                                       
+                                        <input id="email" type="text" class="form-control" value="" name="email" [(ngModel)]= "newUser.email" placeholder="email">                                       
+                                    </div>
+                               
+                            <div style="margin-bottom: 25px" class="input-group">
+                                       
+                                        <input id="pw" width="500px" type="password" class="form-control" name="pw" [(ngModel)]= "newUser.pw" placeholder="Password">
+                                    </div>
+                                   
+ 
+                               
+                            <!-- <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                      </div>
+                                    </div>
+  -->
+ 
+                               
+                                    <!-- Button -->
+ 
+                                    
+                                      <button id="btn-login" type="submit" class="btn btn-success">Go  </button>
+                                     
+ 
+                                  
+                              
+ 
+<!--  
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                         
+                                            Don't have an account!
+                                        <a href="/register">
+                                            Sign Up Here
+                                        </a>
+                                       
+                                    </div>
+                                </div>    -->
+                            </form>    
+ 
+ 
+ 
+                        </div>                    
+                    </div> 
+       <!-- </div>-->
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+input.ng-invalid.ng-dirty{
+    border-bottom-color:red;
+    box-shadow: 1px 1px 1px 1px red;
+}
+
+/* .container{
+    width: 1000px;
+    text-align: left;
+    box-align: center;
+} */
+
+body{
+    background-color: grey;
+}
+
+.form-group{
+    
+    
+    padding-left: 10%;
+    padding-right: 10%;
+   
+
+}
+
+.panel-info{
+    
+    padding-left: 50%;
+    
+}
+
+.panelbox{
+    padding-top: 200px;
+    background-color: whitesmoke;
+    height: 1500px;
+    width: 600px;
+}
+
+.panel-heading{
+    padding-left: 10%;
+}
+
+.bottomsec{
+    padding-left: 10%;
+}

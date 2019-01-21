@@ -1,0 +1,178 @@
+
+
+
+
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>#</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        </head>
+        <body id="clrblk">
+                <div class="container">   
+        
+        
+        
+                  
+               <!-- <div id="loginbox" style="margin-top:100px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  -->                 
+                    <div class="panel panel-info" >
+                            <div class="panel-heading">
+                                <div class="panel-title"><h3>Registration</h3></div>
+                                <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
+                            </div>    
+         
+                            <div style="padding-top:30px" class="panel-body" >
+            
+        
+        
+        
+                                <form #userForm= "ngForm"  *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+        
+                                    <!--
+                                    {{ userForm.form.valid }}
+                                    
+                                    ngForm, ngModel, ngMODELgROUP
+                                        {{ userForm.value | json }}
+                                    
+                                      
+                                        <hr />
+                                        {{userModel | json}}-->
+                                    
+                                        <div class="form-group">
+                                          <select (blur)="validateType(type.value)" (change)= "validateType(type.value)" #type= "ngModel" id="ddlViewBy"
+                                            [class.is-invalid]="ttype.HasError && type.touched" class="custom-select" name="type" [(ngModel)]= "userModel.type">
+                                            <option value="default">Select account Type</option>
+                                            <!-- <option *ngFor="let type of types">{{ type }}</option> -->
+                                            <option value="1">test1</option>
+                                            <!-- <option value="2">test2</option> -->
+                                            <option value="2" selected="selected">test2</option>
+                                            <option value="3">test3</option>
+                                          </select>
+                                          <!-- <small class="text-danger" [class.d-none]= "!typeHasError || type.untouched ">Please choose a Account type</small> -->
+                                      </div>
+                                    
+                                    
+                                    
+                                        
+                                        <div class="form-group">
+                                          <label>First Name</label>
+                                          <input class="t1" type="text" required #fname="ngModel"
+                                           [class.is-invalid]="fname.invalid && fname.touched" class="form-control" 
+                                          name="fname" [(ngModel)]= "userModel.fname">
+                                          <!-- <small class="text-danger" [class.d-none]= "fname.valid || fname.untouched">First Name is required</small> -->
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                          <label>Last Name</label>
+                                          <input type="text"  #lname="ngModel"
+                                           [class.is-invalid]="lname.invalid && lname.touched" class="form-control" 
+                                          name="lname" [(ngModel)]= "userModel.lname">
+                                          <!-- <small class="text-danger" [class.d-none]= "lname.valid || lname.untouched">Last Name is required</small> -->
+                                        </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="text"  required class="form-control" name="email" [(ngModel)]= "userModel.email">
+                                        </div>
+                                    
+                                    
+                                    
+                                          <div class="form-group">
+                                              <label>Phone</label>
+                                              <input type="tel" #phone="ngModel" pattern="^\d{10}$" 
+                                               [class.is-invalid]="phone.invalid && phone.touched"  class="form-control" name="phone" [(ngModel)]= "userModel.phone">
+                                               <!-- <small class="text-danger" [class.d-none]= "phone.valid || phone.untouched">Phone number must be 10 digits</small> -->
+                                            <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+                                              <small class="text-danger" *ngIf="phone.errors.required"> Phone number is required</small>
+                                              <small class="text-danger" *ngIf="phone.errors.pattern"> Phone number must be 10 digits</small>
+                                            </div>
+                                          </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                     
+                                    
+                                    
+                                    
+                                    
+                                         <!-- <div class="mb-3">
+                                            <label>Time preference</label>
+                                    
+                                            <div class="form-check">
+                                              <input class="form-check-input" [(ngModel)]= "userModel.timePreference" type="radio" name="timePreference" value="morning">
+                                              <label class="form-check-label">Morning (9AM - 12PM)</label>
+                                            </div>
+                                    
+                                            <div class="form-check">
+                                                <input class="form-check-input" [(ngModel)]= "userModel.timePreference" type="radio" name="timePreference" value="evening">
+                                                <label class="form-check-label">Evening (9AM - 12PM)</label>
+                                              </div>
+                                    
+                                          </div>
+                                        -->
+                                        <div class="form-group">
+                                          <label>Password</label>
+                                          <input type="text"  #pw="ngModel"
+                                           [class.is-invalid]="pw.invalid && pw.touched" class="form-control" 
+                                          name="pw" [(ngModel)]= "userModel.pw">
+                                          <!-- <small class="text-danger" [class.d-none]= "pw.valid || pw.untouched">Password is required</small> -->
+                                        </div>
+                                    
+                                    
+                                        <div class="form-group">
+                                          <label>Re-enter Password</label>
+                                          <input type="text"  #rpw="ngModel"
+                                           [class.is-invalid]="rpw.invalid && rpw.touched" class="form-control" 
+                                          rpw="rpw" [(ngModel)]= "userModel.rpw">
+                                          <!-- <small class="text-danger" [class.d-none]= "rpw.valid || rpw.untouched">Re-enter password</small> -->
+                                        </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                          <div class="form-check mb-3">
+                                            <input class="form-check-input" required name="subscribe" [(ngModel)]= "userModel.subscribe" type="checkbox">
+                                            <label class="form-check-label">
+                                              Agree to #board's Terms and Conditions
+                                            </label>
+                                          </div>
+                                    
+                                    
+                                    
+                                    
+                                          <button [disabled]="userForm.form.invalid || topicHasError" class="btn btn-primary" type="submit">Submit form</button>
+                                    
+                                          <div class="form-group">
+                                              <div class="col-md-12 control">
+                                                  <div  style="border-top: 1px white; padding-top:15px; font-size:85%" >
+                                                      Do you have an account!
+                                                  <a href="/login">
+                                                      Sign In Here
+                                                  </a>
+                                                  </div>
+                                              </div>
+                                          </div>   
+                                      </form>
+        
+        
+        
+        
+         
+         
+                                </div>                    
+                            </div> 
+               <!-- </div>-->
+               
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,41 @@
+/* .container{
+    width: 800px !important;
+} */
+
+body{
+    background-color: grey;
+}
+.panelbox{
+    
+    
+    padding-left: 50%;
+    
+}
+
+
+.panel{
+    width: 600px;
+    background-color: whitesmoke;
+    height: 700px;
+  
+
+}
+
+.panel-title{
+    padding-left: 10%;
+}
+
+.panel-body{
+    
+    padding: 10%;
+}
+
+.panel-heading{
+    padding-top: 200px;
+    
+}
+
+.form-group{
+    padding-right: 30%;
+}
+

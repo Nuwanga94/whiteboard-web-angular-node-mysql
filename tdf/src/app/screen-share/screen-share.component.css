@@ -1,0 +1,31 @@
+/* Styles go here */
+
+body{
+    font-family: "Eau Naturelle", "Helvetica", "Arial", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+  font-weight:100;
+  color: #444;
+ background-color: #ddd; 
+}
+
+#canvas{
+  border-bottom: 1px solid rgba(0,0,0,0.3); 
+  background-color: #FFF;
+  box-shadow: 0 9px 20px -5px rgba(0,0,0,0.8);
+}
+
+#d{
+  text-align: center;
+}
+
+h1{
+  color: #444;
+  font-family: "Eau Naturelle", "Helvetica", "Arial", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+  font-weight: 500;
+}
+
+a{
+  color: #4a9;
+  text-decoration:none;
+  font-style:italic;
+  font-weight: 800;
+}

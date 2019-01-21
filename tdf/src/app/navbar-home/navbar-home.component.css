@@ -1,0 +1,19 @@
+.nav-link{
+    padding-right:55px !important;
+}
+
+.navbar-brand{
+    padding-right: 60px !important;
+}
+/* 
+.navbar{
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+   
+    
+} */
+
+
+body {
+     padding-top: 0px;
+}

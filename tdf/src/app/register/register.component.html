@@ -1,0 +1,187 @@
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#</title>
+   
+
+</head>
+<body id="clrblk">
+        <div class="container" >   
+
+
+
+          
+       <!-- <div id="loginbox" style="margin-top:100px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                   -->
+            <div class="panel panel-info" >
+
+                <div class="panelbox">
+
+                    <div class="panel-heading">
+                        <div class="panel-title"><h3>Registration</h3></div>
+                        <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
+                    </div>    
+ 
+                    <div style="padding-top:30px" class="panel-body" >
+    
+
+
+
+                        <form #userForm= "ngForm"  *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+
+
+                            <div class="form-group">
+                            <label>Account Type</label>
+                            <form action="">
+                                    
+                                <input type="radio" name="admin" value="admin" [(ngModel)]= "userModel.type" ngModel required> Admin
+                                <input type="radio" name="student" value="student" [(ngModel)]= "userModel.type" ngModel required> Student
+                                <input type="radio" name="teacher" value="teacher" [(ngModel)]= "userModel.type" ngModel required> Teacher
+                              </form>
+                            </div>
+                                
+                                <div class="form-group">
+                                  <label>First Name</label>
+                                  <input class="t1" type="text" required #FirstName="ngModel"
+                                   class="form-control" 
+                                  name="FirstName" [(ngModel)]= "userModel.FirstName" ngModel required>
+                                 
+                                </div>
+                            
+                                <div class="form-group">
+                                  <label>Middle Name</label>
+                                  <input type="text"  #MidName="ngModel"
+                                  class="form-control" 
+                                  name="MidName" [(ngModel)]= "userModel.MidName" ngModel required>
+                                
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text"  #LastName="ngModel"
+                                    class="form-control" 
+                                    name="LastName" [(ngModel)]= "userModel.LastName" ngModel required>
+                                  
+                                  </div>
+                            
+                            
+                            
+                            
+                            
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text"  required class="form-control" name="EmailId" [(ngModel)]= "userModel.EmailId" ngModel required [pattern]="emailPattern" >
+                                </div>
+                            
+                            
+                            
+                               
+                            
+
+                                 
+                             
+                                <div class="form-group">
+                                  <label>Password</label>
+                                  <input type="password"  #Password="ngModel"
+                                    class="form-control" 
+                                  name="Password" [(ngModel)]= "userModel.Password" ngModel required>
+                                  
+                                </div>
+                            
+                            
+                                <div class="form-group">
+                                  <label>Re-enter Password</label>
+                                  <input type="password"  #RePassword="ngModel"
+                                   class="form-control" 
+                                  name="RePassword" [(ngModel)]= "userModel.RePassword" ngModel required>
+                                 
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Address Line1</label>
+                                    <input type="text"  #No="ngModel"
+                                    class="form-control" 
+                                    name="No" [(ngModel)]= "userModel.No" ngModel required>
+                                  
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Address Line2</label>
+                                    <input type="text"  #Street="ngModel"
+                                    class="form-control" 
+                                    name="Street" [(ngModel)]= "userModel.Street" ngModel required>
+                                  
+                                  </div>
+
+
+                                  <div class="form-group">
+                                    <label>Address Line3</label>
+                                    <input type="text"  #City="ngModel"
+                                    class="form-control" 
+                                    name="City" [(ngModel)]= "userModel.City" ngModel required>
+                                  
+                                  </div>
+
+
+
+
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" #ContactNo="ngModel" pattern="^\d{10}$" 
+                                     class="form-control" name="ContactNo" [(ngModel)]= "userModel.ContactNo" >
+                                     
+                                  
+                                  </div>
+                              
+                          
+                            
+                            
+                            
+                            
+                                    <div class="bottomsec">
+                            
+                                  <!-- <div class="form-check mb-3">
+                                    <input class="form-check-input" required name="subscribe" [(ngModel)]= "userModel.subscribe" type="checkbox" ngModel required>
+                                    <label class="form-check-label">
+                                      Agree to #board's Terms and Conditions
+                                    </label>
+                                  </div> -->
+                            
+                            
+                            
+                            
+                                  <button  class="btn btn-primary" type="submit" [disabled]="!userForm.valid" >Submit form</button>
+                            
+                                  <!-- <div class="form-group">
+                                      <div class="col-md-12 control">
+                                         
+                                              Do you have an account!
+                                          <a href="/login">
+                                              Sign In Here
+                                          </a>
+                                          
+                                      </div>
+                                  </div>    -->
+
+
+                                </div>
+
+                              </form>
+
+
+
+
+ 
+ 
+                        </div>                    
+                    </div> 
+       <!-- </div>-->
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.bar {
+    width: 220px; /* Set a width if you like */
+    padding-top: 250px;
+    height: 100%;
+    background-color: beige;
+    
+  }
+
+
+  .vertical-menu {
+    width: 220px; /* Set a width if you like */
+   
+    
+  }
+  
+  .vertical-menu a {
+    background-color: rgb(224, 224, 224); /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: rgb(119, 114, 114); /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu a.active {
+    background-color: rgb(169, 172, 172); /* Add a green color to the "active/current" link */
+    color: rgb(0, 0, 0);
+  }
+
+
+
+
+
+
+
+  .vertical-menu-view a {
+    background-color: rgb(241, 237, 237); /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 14px;
+    text-align: center;
+    
+  }
+  
+  .vertical-menu-view a:hover {
+    background-color: rgb(201, 196, 196); /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu-view a.active {
+    background-color: rgb(169, 172, 172); /* Add a green color to the "active/current" link */
+    color: rgb(0, 0, 0);
+  }
